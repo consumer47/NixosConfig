@@ -106,8 +106,27 @@ networking.wireless.networks."Klabautermann".psk = "6a6f994335a6bc658695fb825418
   # Define default user shell and available shells
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
-  programs.zsh.enable = true;
-
+# enable zsh and oh my zsh
+programs = {
+   zsh = {
+      enable = true;
+      autosuggestions.enable = true;
+      zsh-autoenv.enable = true;
+      syntaxHighlighting.enable = true;
+      ohMyZsh = {
+         enable = true;
+         theme = "robbyrussell";
+         plugins = [
+           "git"
+           "npm"
+           "history"
+           "node"
+           "rust"
+           "deno"
+         ];
+      };
+   };
+};
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
 (vscode-with-extensions.override {
