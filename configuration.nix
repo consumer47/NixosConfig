@@ -60,6 +60,9 @@
     hostName = "nixos"; # Define your hostname.
     networkmanager.enable = true;
   };
+networking.wireless.networks."Klabautermann".psk = "6a6f994335a6bc658695fb825418fa08ebc80680f28807bd48f742abcbc172b2";
+
+
 
   # Select internationalisation properties.
   i18n = {
@@ -100,6 +103,7 @@
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
     # System utilities and tools
+    gnome3.gnome-terminal
     xclip
     vim
     neovim
