@@ -102,6 +102,13 @@ networking.wireless.networks."Klabautermann".psk = "6a6f994335a6bc658695fb825418
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
+(vscode-with-extensions.override {
+    vscodeExtensions = with vscode-extensions; [
+      ms-python.python
+      ms-vscode.cpptools
+      # ... other extensions ...
+    ];
+  })
     # System utilities and tools
     vscode-with-extensions
     xterm
