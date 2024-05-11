@@ -19,6 +19,7 @@
   services.xserver = {
     enable = true;
     layout = "de";
+    xkbOptions = "caps:escape";
     xkbVariant = "";
     displayManager = {
       gdm.enable = false;
