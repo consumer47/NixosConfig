@@ -4,9 +4,16 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+# <home-manager/nixos> 
 # "${pkgs.home-manager}/nixos"
     ];
-
+#home-manager.users.dennis = { pkgs, ... }: {
+#    # stateVersion determines stable/unstable
+#     home.stateVersion = "23.11";
+#     home.packages = with pkgs; [
+#     
+#     ];
+#};
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dennis = {
     isNormalUser = true;
@@ -39,6 +46,7 @@
      ];
     };
     desktopManager.gnome.enable = false;
+    desktopManager.xfce.enable = true;
   };
   services.xserver.libinput = {
   enable = true;
@@ -109,6 +117,7 @@ networking.wireless.networks."Klabautermann".psk = "6a6f994335a6bc658695fb825418
       # ... other extensions ...
     ];
   })
+  pulseaudio
     # System utilities and tools
     vscode-with-extensions
     xterm
