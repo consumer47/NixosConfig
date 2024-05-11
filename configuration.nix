@@ -103,6 +103,8 @@ networking.wireless.networks."Klabautermann".psk = "6a6f994335a6bc658695fb825418
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
     # System utilities and tools
+    vscode-with-extensions
+    xterm
     gnome3.gnome-terminal
     xclip
     vim
