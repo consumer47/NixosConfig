@@ -155,6 +155,7 @@ ms-vscode.cpptools
       # ... other extensions ...
     ];
   })
+  vimPlugins.vim-tridactyl
   rofi
   pulseaudio
     # System utilities and tools
@@ -218,6 +219,7 @@ htop
     docker
     qemu
     i3
+    tridactyl-native
     (vim_configurable.override {
       features = "huge"; # Vim compiled with clipboard support
     })
@@ -245,4 +247,5 @@ htop
   boot.loader.efi.canTouchEfiVariables = true;
 
   # ... other configurations ...
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 }
