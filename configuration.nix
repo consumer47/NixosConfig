@@ -26,7 +26,7 @@
   services.xserver = {
     enable = true;
     layout = "de";
-    xkbOptions = "caps:escape";
+    xkbOptions = "caps:escape, odiaeresis:BackSpace";
     xkbVariant = "";
     displayManager = {
       gdm.enable = false;
@@ -129,15 +129,45 @@ programs = {
   environment.systemPackages = with pkgs; [
 (vscode-with-extensions.override {
     vscodeExtensions = with vscode-extensions; [
-      ms-python.python
-      ms-vscode.cpptools
+#     ms-vscode.cpptools
+      
+# 076923.python-image-preview
+# andenetalexander.vim-cheatsheet
+# batisteo.vscode-django
+# benjamin-simmonds.pythoncpp-debug
+# donjayamanne.python-environment-manager
+# donjayamanne.python-extension-pack
+# harryhopkinson.vim-theme
+# kevinrose.vsc-python-indent
+# mgesbert.python-path
+# ms-python.debugpy
+ms-python.python
+# ms-python.vscode-pylance
+ms-vscode.cpptools
+# njpwerner.autodocstring
+# vintharas.learn-vim
+# visualstudioexptteam.intellicode-api-usage-examples
+# visualstudioexptteam.vscodeintellicode
+# vscodevim.vim
+# wholroyd.jinja
+# xadillax.viml
+# xirider.livecode
       # ... other extensions ...
     ];
   })
+  rofi
   pulseaudio
     # System utilities and tools
-    vscode-with-extensions
+    networkmanagerapplet
+    blueman
+arandr
+ranger
+htop
+
+    pavucontrol 
+    spotify
     xterm
+
     gnome3.gnome-terminal
     xclip
     vim
